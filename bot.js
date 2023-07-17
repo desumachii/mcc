@@ -10,29 +10,22 @@ function createBot () {
     version: false
     })
     bot.on('login', function() {
-      bot.chat('/reginster 123123123 123123123')
-      bot.chat('/login 123123123 123123123')
+      bot.chat('Hello')
     })
     bot.on('chat', (username, message) => {
       if (username === bot.username) return
       switch (message) {
         case ';start':
-          bot.chat('24 ATERNOS > Bot started! - Made By DICKE')
+          bot.chat('24 ATERNOS > Bot started! - Made By HIROWALANGUTAK')
           bot.setControlState('forward', true)
           bot.setControlState('jump', true)
           bot.setControlState('sprint', true)
           break
           case ';stop':
-            bot.chat('24 ATERNOS > Bot stoped! - Made By DICKE')
+            bot.chat('24 ATERNOS > Bot stoped! - Made By HIROWALANGUTAK')
             bot.clearControlStates()
             break
           }
-        })
-        bot.on('spawn', function() {
-          bot.chat('Bot > Spawned')
-        })
-        bot.on('death', function() {
-          bot.chat('Bot > I died, respawn')
         })
         bot.on('kicked', (reason, loggedIn) => console.log(reason, loggedIn))
         bot.on('error', err => console.log(err))
