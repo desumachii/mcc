@@ -4,9 +4,9 @@ console.log('Starting...')
 
 function createBot () {
     const bot = mineflayer.createBot({
-    host: "localhost",
-    port: "25565",
-    username: "24ATERNOSBOT",
+    host: "kiwimochi.aternos.me",
+    port: "55097",
+    username: "WALANGBUHAY",
     version: false
     })
     bot.on('login', function() {
@@ -17,13 +17,13 @@ function createBot () {
       if (username === bot.username) return
       switch (message) {
         case ';start':
-          bot.chat('24 ATERNOS > Bot started! - Made By Fortcote')
+          bot.chat('24 ATERNOS > Bot started! - Made By DICKE')
           bot.setControlState('forward', true)
           bot.setControlState('jump', true)
           bot.setControlState('sprint', true)
           break
           case ';stop':
-            bot.chat('24 ATERNOS > Bot stoped! - Made By Fortcote')
+            bot.chat('24 ATERNOS > Bot stoped! - Made By DICKE')
             bot.clearControlStates()
             break
           }
